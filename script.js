@@ -43,6 +43,15 @@ fetch(welcomeQueryURL)
                     let synopsis = document.createElement('p')
                         synopsis.textContent = data.overview
                         document.getElementById("").append(synopsis)
+
+                    let genre = document.createElement('h6')
+                        genre = data.genres[0].name
+                        document.getElementById("").append(genre)
+
+                    let runtime = document.createElement('h6')
+                        runtime = data.runtime + " minutes"
+                        document.getElementById("").append(runtime)
+                    
                 })            
     })
 
