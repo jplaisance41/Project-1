@@ -1,4 +1,4 @@
-#movieModal {
-  display: block;
-  color: white;
+img {
+  max-width: 50%;
+  height: 50%;
 }
