@@ -1,3 +1,5 @@
+// *John's Section*
+
 // Variables
 var movies;
 var genres;
@@ -17,3 +19,9 @@ function streamingServices() {
 fetch("https://api.themoviedb.org/3/movie/{movie_id}/watch/providers?api_key=42f640bb5d98e41dd2c5c48527c1b3fd"
 )
 }
+
+
+// **Jon's Section**
+
+
+// ***Johnny's Section***
