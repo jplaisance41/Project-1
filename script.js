@@ -38,19 +38,19 @@ fetch(welcomeQueryURL)
                         
                     let title = document.createElement('h3')
                         title.textContent = data.title
-                        document.getElementById("").append(title)
+                        document.getElementById("movieTitle").append(title)
 
                     let synopsis = document.createElement('p')
                         synopsis.textContent = data.overview
-                        document.getElementById("").append(synopsis)
+                        document.getElementById("shortSynop").append(synopsis)
 
                     let genre = document.createElement('h6')
                         genre = data.genres[0].name
-                        document.getElementById("").append(genre)
+                        document.getElementById("shortSynop").append(genre)
 
                     let runtime = document.createElement('h6')
                         runtime = data.runtime + " minutes"
-                        document.getElementById("").append(runtime)
+                        document.getElementById("shortSynop").append(runtime)
                     
                 })            
     })
