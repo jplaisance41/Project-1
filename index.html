@@ -28,10 +28,10 @@
           </p>
         </div>
         <div class="tile is-child box">
-          <p class="title">Modal</p>
-          <div id="movieModal" class="modal">
-      <div class="modal-background"></div>
-      <div class="modal-content">
+          <p class="title">How do you watch movies? With or without loved ones? With or without popcorn?</p>
+          <img src="popcorn.jpg" alt="popcorn"> <br><br>
+          <img src="cartoonmoviepic.jpeg" alt="cartoon couple">
+       
         <h2>Tell us what you like?</h2>
         <form>
           <div id="searchGenre" value ="&with_genres=">
@@ -92,7 +92,7 @@
               Shudder
             </label>
             <label class="checkbox">
-              <input type="checkbox" value ="377" />
+              <input type="checkbox" value ="337" />
               Disney plus
             </label>
             <label class="checkbox">
@@ -100,8 +100,12 @@
               Apple TV
             </label>
             <label class="checkbox">
-              <input type="checkbox" value = "9"/>
+              <input type="checkbox" value="9|119" />
               Prime Video
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" value="531" />
+              Paramount plus
             </label>
           </div>
           <div id="searchRatings" value ="&certification_country=US&certification=">
@@ -133,15 +137,27 @@
       </div>
       <div class="tile is-parent">
         <div class="tile is-child box">
-          <p class="title">Check out this movie!</p>
     <div id="movieInfo">
-       <h2>Heres your movie!</h2>
+       <h2 class="title"> Heres your movie!</h2>
       <div id="movieTitle"></div>
       <div id="poster"></div>
       <button id="yesBtn">Lets watch this!</button>
       <button id="noBtn">No</button>
       <p id="shortSynop"></p>
-      <button id="trailerBtn">see the trailer here</button>
+      <form id="ytForm">
+        <label class="label">See the trailer on YouTube here!</label>
+        <div class="field has-addons">
+          <div class="control">
+            <input class="input" type="text" id="search" placeholder="Let's watch a Trailer!">
+          </div>
+          <div class="control">
+            <a class="button is-danger" type="submit" id="ytSearchBtn" value="Search">Search</a>
+          </div>
+        </div>
+      </form>
+      <div class="columns">
+        <div class="column is-full">
+          <div id="videos">
       <p>
         Watch this movie on
         <select name="streamingService" id="streamingServiceInput">
