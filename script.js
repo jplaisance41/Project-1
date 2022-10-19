@@ -42,7 +42,7 @@ fetch(welcomeQueryURL)
         posterIMG.src = selectedMoviePoster;
         document.getElementById("poster").append(posterIMG);
 
-        let title = document.createElement("h3");
+        let title = document.createElement("h1");
         title.textContent = data.title;
         document.getElementById("movieTitle").append(title);
 
@@ -51,7 +51,7 @@ fetch(welcomeQueryURL)
         document.getElementById("shortSynop").append(synopsis);
 
         let genre = document.createElement("h6");
-        genre = data.genres[0].name;
+        genre = data.genres[0].name+ "/" + data.genres[1].name;
         document.getElementById("shortSynop").append(genre);
 
         let runtime = document.createElement("h6");
@@ -66,16 +66,20 @@ $("#findMovie").click(function (event) {
   $("#movieTitle").empty();
   $("#shortSynop").empty();
 
+  $('html, body').animate({
+    scrollTop: $("#TopofPage").offset().top
+    }, 1000);
+
   //streaming
   let streamTest = "";
   let inputs = $("#searchStreamingService input:checked");
 
   for (let i = 0; i < inputs.length; i++) {
-    streamTest += "," + inputs.eq(i).val();
+    streamTest += "|" + inputs.eq(i).val();
   }
 
-  streamTest = "&with_watch_providers=" + streamTest;
-  streamChoices = streamTest.replace(",", "");
+  streamTest = "&with_watch_providers=" + streamTest +"&watch_region=US&with_watch_monetization_types=flatrate";
+  streamChoices = streamTest.replace("|", "");
   console.log(streamChoices);
 
   // genre
@@ -97,11 +101,11 @@ $("#findMovie").click(function (event) {
   let ratinginputs = $("#searchRatings input:checked");
 
   for (let i = 0; i < ratinginputs.length; i++) {
-    ratingTest += "," + ratinginputs.eq(i).val();
+    ratingTest += "|" + ratinginputs.eq(i).val();
   }
 
   ratingTest = "&certification_country=US&certification=" + ratingTest;
-  ratingChoices = ratingTest.replace(",", "");
+  ratingChoices = ratingTest.replace("|", "");
   console.log(ratingChoices);
 
   let customFormResults = ratingChoices + genreChoices + streamChoices;
@@ -111,7 +115,7 @@ $("#findMovie").click(function (event) {
   let formQueryURL =
     "https://api.themoviedb.org/3/discover/movie?api_key=" +
     APIKey +
-    "&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1" +
+    "&language=en-US&region=US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1" +
     customFormResults;
 
   console.log(formQueryURL);
@@ -121,6 +125,7 @@ $("#findMovie").click(function (event) {
       return responce.json();
     })
     .then(function (data) {
+        console.log(data.results)
       return data.results;
     })
     .then(function (movieresults) {
@@ -152,7 +157,7 @@ $("#findMovie").click(function (event) {
           posterIMG.src = selectedMoviePoster;
           document.getElementById("poster").append(posterIMG);
 
-          let title = document.createElement("h3");
+          let title = document.createElement("h1");
           title.textContent = data.title;
           document.getElementById("movieTitle").append(title);
 
@@ -161,7 +166,7 @@ $("#findMovie").click(function (event) {
           document.getElementById("shortSynop").append(synopsis);
 
           let genre = document.createElement("h6");
-          genre = data.genres[0].name;
+          genre = data.genres[0].name + "/" + data.genres[1].name;
           document.getElementById("shortSynop").append(genre);
 
           let runtime = document.createElement("h6");
