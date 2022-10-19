@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <div class="tile is-ancestor">
+    <div class="tile is-ancestor" id="TopofPage">
       <div class="tile is-4 is-vertical is-parent">
         <div class="tile is-child box">
           <p class="title">✨What to watch?✨</p>
@@ -27,11 +27,12 @@
           <img src="popcorn.jpg" alt="Popcorn">
         </div>
         <div class="tile is-child box">
-          <p> How do you watch movies? With or without loved ones? With or without popcorn?</p>
+          <p class="title">How do you watch movies? With or without loved ones? With or without popcorn?</p>
+           <br><br>
           <img src="cartoonmoviepic.jpeg" alt="cartoon couple">
        
         <h2>Tell us what you like?</h2>
-        <form>
+        <form id="jumpToForm">
           <div id="searchGenre" value ="&with_genres=">
             <h2>Genre:</h2>
             <label class="checkbox">
@@ -136,6 +137,7 @@
     <div id="movieInfo">
       <div id="movieTitle"></div>
       <div id="poster"></div> <br>
+      <button id="noBtn"><a href="#jumpToForm">This is not my jam</a></button> <br>
       <p id="shortSynop"></p> <br>
       <button id="noBtn">This is not my jam</button> <br> <br>
       <button id="trailerBtn">See the trailer here</button>
