@@ -16,7 +16,7 @@ fetch(welcomeQueryURL)
   .then(function (movieresults) {
     let randommovie =
       movieresults[Math.floor(Math.random() * movieresults.length) + 1];
-    let movieID = String(randommovie.id);
+    let movieID = String(randommovie?.id);
 
     let selectedMovieURL =
       "https://api.themoviedb.org/3/movie/" +
@@ -126,7 +126,7 @@ $("#findMovie").click(function (event) {
     .then(function (movieresults) {
       let randommovie =
         movieresults[Math.floor(Math.random() * movieresults.length) + 1];
-      let movieID = String(randommovie.id);
+      let movieID = String(randommovie?.id);
 
       let selectedMovieURL =
         "https://api.themoviedb.org/3/movie/" +
