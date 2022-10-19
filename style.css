@@ -2,15 +2,11 @@ body {
   margin-top: 20%;
 }
 
-.tile {
-}
-
-.is-child {
-}
 .is-ancestor {
   padding-top: 30px;
   padding-right: 25%;
   padding-left: 25%;
+  justify-content: center;
 }
 
 #shortSynop {
