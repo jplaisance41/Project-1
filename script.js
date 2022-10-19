@@ -15,7 +15,7 @@ fetch(welcomeQueryURL)
   })
   .then(function (movieresults) {
     let randommovie =
-      movieresults[Math.floor(Math.random() * movieresults.length) + 1];
+      movieresults[Math.floor(Math.random() * movieresults.length)];
     let movieID = String(randommovie?.id);
 
     let selectedMovieURL =
@@ -55,7 +55,7 @@ fetch(welcomeQueryURL)
         document.getElementById("shortSynop").append(genre);
 
         let runtime = document.createElement("h6");
-        runtime = data.runtime + " minutes";
+        runtime = " " + data.runtime + " minutes";
         document.getElementById("shortSynop").append(runtime);
       });
   });
@@ -125,7 +125,7 @@ $("#findMovie").click(function (event) {
     })
     .then(function (movieresults) {
       let randommovie =
-        movieresults[Math.floor(Math.random() * movieresults.length) + 1];
+        movieresults[Math.floor(Math.random() * movieresults.length)];
       let movieID = String(randommovie?.id);
 
       let selectedMovieURL =
@@ -165,7 +165,7 @@ $("#findMovie").click(function (event) {
           document.getElementById("shortSynop").append(genre);
 
           let runtime = document.createElement("h6");
-          runtime = data.runtime + " minutes";
+          runtime = " " + data.runtime + " minutes";
           document.getElementById("shortSynop").append(runtime);
         });
     });
