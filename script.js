@@ -59,6 +59,3 @@ fetch(welcomeQueryURL)
         document.getElementById("shortSynop").append(runtime);
       });
   });
-window.onload = function () {
-  $("#movieModal").hide();
-};
