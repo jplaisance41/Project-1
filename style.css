@@ -3,9 +3,10 @@ body {
 }
 
 .tile {
-  -ms-flex-wrap: 20px;
 }
 
+.is-child {
+}
 .is-ancestor {
   padding-top: 30px;
   padding-right: 25%;
@@ -42,8 +43,14 @@ button {
 
 .is-child.box {
   border-radius: 30px;
+  padding-bottom: 1%;
 }
 
-p {
-  margin-top: 0%;
+.footer img {
+  max-width: 35px;
+  min-height: 35px;
+}
+
+#movieTitle {
+  font-size: 40px;
 }

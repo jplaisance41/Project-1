@@ -2,9 +2,10 @@ let posterID = document.getElementById("Poster");
 
 const APIKey = "42f640bb5d98e41dd2c5c48527c1b3fd";
 var welcomeQueryURL =
+  localStorage.getItem("lastUrl") ??
   "https://api.themoviedb.org/3/movie/popular?api_key=" +
-  APIKey +
-  "&language=en-US&page=1";
+    APIKey +
+    "&language=en-US&page=1";
 
 fetch(welcomeQueryURL)
   .then(function (responce) {
@@ -15,7 +16,7 @@ fetch(welcomeQueryURL)
   })
   .then(function (movieresults) {
     let randommovie =
-      movieresults[Math.floor(Math.random() * movieresults.length) + 1];
+      movieresults[Math.floor(Math.random() * movieresults.length)];
     let movieID = String(randommovie?.id);
 
     let selectedMovieURL =
@@ -55,7 +56,7 @@ fetch(welcomeQueryURL)
         document.getElementById("shortSynop").append(genre);
 
         let runtime = document.createElement("h6");
-        runtime = data.runtime + " minutes";
+        runtime = " " + data.runtime + " minutes";
         document.getElementById("shortSynop").append(runtime);
       });
   });
@@ -116,6 +117,7 @@ $("#findMovie").click(function (event) {
 
   console.log(formQueryURL);
 
+  localStorage.setItem("lastUrl", formQueryURL);
   fetch(formQueryURL)
     .then(function (responce) {
       return responce.json();
@@ -124,9 +126,9 @@ $("#findMovie").click(function (event) {
       return data.results;
     })
     .then(function (movieresults) {
-      let randommovie =
-        movieresults[Math.floor(Math.random() * movieresults.length) + 1];
-      let movieID = String(randommovie?.id);
+      let index = Math.floor(Math.random() * movieresults.length);
+      let randommovie = movieresults[index];
+      let movieID = String(randommovie.id);
 
       let selectedMovieURL =
         "https://api.themoviedb.org/3/movie/" +
@@ -165,7 +167,7 @@ $("#findMovie").click(function (event) {
           document.getElementById("shortSynop").append(genre);
 
           let runtime = document.createElement("h6");
-          runtime = data.runtime + " minutes";
+          runtime = " " + data.runtime + " minutes";
           document.getElementById("shortSynop").append(runtime);
         });
     });
