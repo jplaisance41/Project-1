@@ -15,251 +15,133 @@
   </head>
 
   <body>
-    <div class="tile is-ancestor">
+    <div class="tile is-ancestor" id="TopofPage">
       <div class="tile is-4 is-vertical is-parent">
         <div class="tile is-child box">
           <p class="title">What to watch?</p>
           <p>
             We know how hard it is to pick from the endless options of movies
             that are online when you're ready to settle in, cozy up, and watch a
-            movie! Here we choose for you! You can either pick our random
-            selection on the homescreen by clicking lets watch, or you can click
-            no and fill out a very short form to let us know what you're into!
+            movie! Here we choose for you! We will suggest something random but if it isnt your jam, then you will be redirected to our what is your jam form.
           </p>
+          <img src="popcorn.jpg" alt="Popcorn">
         </div>
         <div class="tile is-child box">
           <p class="title">How do you watch movies? With or without loved ones? With or without popcorn?</p>
-          <img src="popcorn.jpg" alt="popcorn"> <br><br>
+           <br><br>
           <img src="cartoonmoviepic.jpeg" alt="cartoon couple">
-          <form>
-          <div id="searchGenre">
-            <h2>Genre:</h2>
-            <label class="checkbox">
-              <input type="checkbox" />
-              Comedy
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              Horror
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              Sci-Fi
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              Action
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              Family Friendly
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              Rom Com
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              Fantasy
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              Documentary
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              Sports
-            </label>
-          </div>
-          <div id="searchStreamingService">
-            <h3>Streaming Service:</h3>
-            <label class="checkbox">
-              <input type="checkbox" />
-              Netflix
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              Hulu
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              HBOmax
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              Shudder
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              Disney plus
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              Apple TV
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              Prime Video
-            </label>
-          </div>
-          <div id="searchRatings">
-            <h4>Ratings:</h4>
-            <label class="checkbox">
-              <input type="checkbox" />
-              G
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              PG
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              PG-13
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              R
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              TV-MA
-            </label>
-          </div>
-          <button id="findMovie">Find me a movie!</button>
-        </form>
-          <div id="movieModal" class="modal">
-      <div class="modal-background"></div>
-      <div class="modal-content">
+       
         <h2>Tell us what you like?</h2>
-        <form>
-          <div id="searchGenre">
+        <form id="jumpToForm">
+          <div id="searchGenre" value ="&with_genres=">
             <h2>Genre:</h2>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value="35" />
               Comedy
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value="27"/>
               Horror
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value="878" />
               Sci-Fi
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value="28" />
               Action
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value="10751"/>
               Family Friendly
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value="749,35" />
               Rom Com
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value="14" />
               Fantasy
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value="99" />
               Documentary
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
-              Sports
+              <input type="checkbox" value="18" />
+              Drama
             </label>
           </div>
-          <div id="searchStreamingService">
+          <div id="searchStreamingService" value="&with_watch_providers=">
             <h3>Streaming Service:</h3>
-            <label class="checkbox">
-              <input type="checkbox" />
+            <label class="checkbox" >
+              <input type="checkbox" value="8" />
               Netflix
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox"value="15"/>
               Hulu
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value="384" />
               HBOmax
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value="99" />
               Shudder
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value ="337" />
               Disney plus
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value="350" />
               Apple TV
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value="9|119" />
               Prime Video
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value="531" />
               Paramount plus
             </label>
           </div>
-          <div id="searchRatings">
+          <div id="searchRatings" value ="&certification_country=US&certification=">
             <h4>Ratings:</h4>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value="G"/>
               G
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value="PG" />
               PG
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value="PG-13" />
               PG-13
             </label>
             <label class="checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" value="R"/>
               R
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              TV-MA
             </label>
           </div>
           <button id="findMovie">Find me a movie!</button>
         </form>
       </div>
-      <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-        </div>
+
       </div>
       <div class="tile is-parent">
         <div class="tile is-child box">
+          <p class="title">Check out this movie!</p>
     <div id="movieInfo">
-       <h2 class="title"> Heres your movie!</h2>
       <div id="movieTitle"></div>
-      <div id="poster"></div>
-      <button id="yesBtn">Lets watch this!</button>
-      <button id="noBtn">No</button>
-      <p id="shortSynop"></p>
-      <form id="ytForm">
-        <label class="label">See the trailer on YouTube here!</label>
-        <div class="field has-addons">
-          <div class="control">
-            <input class="input" type="text" id="search" placeholder="Let's watch a Trailer!">
-          </div>
-          <div class="control">
-            <a class="button is-danger" type="submit" id="ytSearchBtn" value="Search">Search</a>
-          </div>
-        </div>
-      </form>
-      <div class="columns">
-        <div class="column is-full">
-          <div id="videos">
-      <p>
+      <div id="poster"></div> <br>
+      <!-- <button id="yesBtn">Lets watch this!</button> -->
+      <button id="noBtn"><a href="#jumpToForm">This is not my jam</a></button> <br>
+      <p id="shortSynop"></p> <br>
+      <button id="trailerBtn">See the trailer here</button>
+      <!-- <p>
         Watch this movie on
         <select name="streamingService" id="streamingServiceInput">
           <option value="Netflix">Netflix</option>
@@ -267,9 +149,10 @@
           <option value="HBO">HBO</option>
           <option value="Shudder">Shudder</option>
           <option value="Disney+">Disney+</option>
+          <option value="Paramount+">Disney+</option>
         </select>
         platform.
-      </p>
+      </p> -->
     </div>
           </p>
         </div>
@@ -290,4 +173,3 @@
   </body>
   <script src="script.js" type="text/javascript"></script>
 </html>
-

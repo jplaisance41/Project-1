@@ -2,12 +2,8 @@ body {
   margin-top: 20%;
 }
 
-#movieModal {
-  display: block;
-  color: white;
-}
-
 .tile {
+  -ms-flex-wrap: 20px;
 }
 
 .is-ancestor {
@@ -30,6 +26,7 @@ body {
 
 .title {
   font-style: bold;
+  font-size: 20px;
 }
 
 button {
@@ -47,9 +44,6 @@ button {
   border-radius: 30px;
 }
 
-img {
-  -ms-flex-align: center;
-}
-
-#movieInfo {
+p {
+  margin-top: 0%;
 }
